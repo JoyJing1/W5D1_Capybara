@@ -38,6 +38,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (6.0.3)
+    bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -194,6 +195,8 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     shellany (0.0.1)
+    shoulda-matchers (3.1.1)
+      activesupport (>= 4.0.0)
     slop (3.6.0)
     spring (1.7.1)
     sprockets (3.6.0)
@@ -225,6 +228,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   better_errors
   binding_of_caller
   byebug
@@ -240,6 +244,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  shoulda-matchers
   spring
   sqlite3
   turbolinks
