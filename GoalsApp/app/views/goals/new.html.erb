@@ -1,0 +1,31 @@
+<h1>Create New Goal</h1>
+
+<%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
+
+<form action="<%= goals_url %>" method="post">
+  <input type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
+
+  <label>Title
+    <input type="string"
+            name="goal[title]"
+            value="<%= @goal.title %>">
+  </label>
+
+  <label>Description
+    <textarea name="goal[description]" 
+              rows="8"
+              cols="40"><%= @goal.description %></textarea>
+  </label>
+
+  <label>Private?
+    <select name="goal[private_goal]">
+      <option value="true" id="private" >Private</option>
+      <option value="false" id="public" selected >Public</option>
+    </select>
+  </label>
+
+  <input type="submit" value="Create New Goal">
+
+</form>

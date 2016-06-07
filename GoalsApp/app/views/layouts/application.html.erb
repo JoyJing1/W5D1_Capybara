@@ -10,5 +10,12 @@
 
 <%= yield %>
 
+<% if logged_in? %>
+  <%= button_to "Sign Out", session_url, method: :delete %>
+  <%= current_user.username %>
+<% else %>
+  <%= button_to "Sign In Page", new_session_url, method: :get %>
+<% end %>
+
 </body>
 </html>
